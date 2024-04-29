@@ -7,6 +7,7 @@ tinderUser.isLoggedIn = false
 
 // console.log(tinderUser);
 
+// Objects can be nested indefinitely
 const regularUser = {
     email: "some@gmail.com",
     fullname: {
@@ -16,7 +17,7 @@ const regularUser = {
         }
     }
 }
-
+// Access nested objects with their key
 // console.log(regularUser.fullname.userfullname.firstname);
 
 const obj1 = {1: "a", 2: "b"}
@@ -24,10 +25,15 @@ const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
 // const obj3 = { obj1, obj2 }
+// output: { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'a', '4': 'b' } }
+
+// Combine objects
 // const obj3 = Object.assign({}, obj1, obj2, obj4)
 
+// Use spread operator to combine objects
 const obj3 = {...obj1, ...obj2}
 // console.log(obj3);
+// output: { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 
 const users = [
@@ -50,7 +56,7 @@ users[1].email
 
 // console.log(Object.keys(tinderUser));
 // console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser)); // get key value pair as array => [[k1, v1], [k2,v2],..]
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
@@ -63,6 +69,7 @@ const course = {
 
 // course.courseInstructor
 
+// Destructure and use alias
 const {courseInstructor: instructor} = course
 
 // console.log(courseInstructor);
@@ -79,4 +86,3 @@ console.log(instructor);
     {},
     {}
 ]
-

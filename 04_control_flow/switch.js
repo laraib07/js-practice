@@ -1,13 +1,13 @@
 // switch (key) {
 //     case value:
-        
+
 //         break;
 
 //     default:
 //         break;
 // }
 
-const month = "march"
+const month = "feb"
 
 switch (month) {
     case "jan":
@@ -15,7 +15,8 @@ switch (month) {
         break;
     case "feb":
         console.log("feb");
-        break;
+        break; // if break is removed and "feb" is matched,
+        // it will execute everything till next break except default
     case "march":
         console.log("march");
         break;

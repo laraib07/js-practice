@@ -36,5 +36,6 @@ const myObject = {
 
 // for (const [key, value] of myObject) {
 //     console.log(key, ':-', value);
-    
 // }
+
+// Cannot use `for of` to iterate object, instead use `for in`

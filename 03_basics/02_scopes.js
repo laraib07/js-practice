@@ -1,17 +1,26 @@
 //var c = 300
-let a = 300
+// let a = 300
 if (true) {
     let a = 10
     const b = 20
+    var c = 30
     // console.log("INNER: ", a);
-    
+
 }
 
+if(true) {
+  if(true) {
+    if(true) {
+      var d = 100;
+    }
+  }
+}
+// console.log(d); // 100
 
 
-// console.log(a);
-// console.log(b);
-// console.log(c);
+// console.log(a); // Reference Error
+// console.log(b); // Reference Error
+// console.log(c); // 30 as scope of var is parent scope
 
 
 function one(){
@@ -21,7 +30,7 @@ function one(){
         const website = "youtube"
         console.log(username);
     }
-    // console.log(website);
+    // console.log(website); // ReferenceError
 
      two()
 
@@ -35,10 +44,10 @@ if (true) {
         const website = " youtube"
         // console.log(username + website);
     }
-    // console.log(website);
+    // console.log(website);  // ReferenceError
 }
 
-// console.log(username);
+// console.log(username); // ReferenceError
 
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
@@ -52,7 +61,7 @@ function addone(num){
 
 
 
-addTwo(5)
+addTwo(5) // ReferenceError: Can't access this type of function before initialization
 const addTwo = function(num){
     return num + 2
 }
