@@ -65,6 +65,8 @@ const promiseFive = new Promise(function(resolve, reject){
     }, 1000)
 });
 
+// We can also use async await to comsume promises given that you use try-catch block
+// to catch reject error.
 async function consumePromiseFive(){
     try {
         const response = await promiseFive

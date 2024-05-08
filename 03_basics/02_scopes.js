@@ -65,3 +65,8 @@ addTwo(5) // ReferenceError: Can't access this type of function before initializ
 const addTwo = function(num){
     return num + 2
 }
+
+/*
+What is hoisting? Explain in detail!
+
+*/

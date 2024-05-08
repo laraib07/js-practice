@@ -15,8 +15,20 @@
         console.log(str, Date.now());
     }
 
-    const intervalId = setInterval(sayDate, 1000, "hi")
+    let intervalId;
 
-    clearInterval(intervalId)
+
+    document.querySelector("#start").addEventListener('click', () => {
+      intervalId = setInterval(sayDate, 1000, "hi");
+    });
+    document.querySelector("#stop").addEventListener('click', () => {
+      clearInterval(intervalId)
+    });
 </script>
 </html>
+
+<!--
+Q. How task queue in javascript works behind the scene?
+Q. What if I start two setTimeout with 1000 and 2000 delay. How task queue will be build
+and how Callback will move to the stack?
+-->
