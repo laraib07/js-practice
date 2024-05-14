@@ -17,7 +17,7 @@ const user = {
 //console.log(user.getUserDetails());
 // console.log(this);
 
-
+// Constructor function
 function User(username, loginCount, isLoggedIn){
     this.username = username;
     this.loginCount = loginCount;
@@ -31,6 +31,11 @@ function User(username, loginCount, isLoggedIn){
     return this
 }
 
+// new is a constructor function
+// 1. new creates an empty object
+// 2. calls constructor function
+// 3. inject values
+// 4. Got it in function
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
 console.log(userOne.constructor);
